@@ -42,7 +42,7 @@ function StoreHeader({ userInfo, onLogout }) {
                 <StoreNotificationIcon />
 
                 {/* 본사 이동 아이콘 (점주만 보임)  */}
-                {userInfo?.workType === 3 && (
+
                     <IconWrap
                         $hoverbg="#ede9fe" // 연보라
                         onMouseEnter={() => setHoveredIcon('hq')}
@@ -52,13 +52,13 @@ function StoreHeader({ userInfo, onLogout }) {
 
                         <BuildingIcon $hovered={hoveredIcon === 'hq'} />
                     </IconWrap>
-                )}
+                
 
                  {/* 직급 */}
                  <div style={{ fontSize: "14px", color: "#6b7280" }}>
-                    {userInfo.workType === 3
-                        ? `${userInfo.branchName || "지점명 없음"}`
-                        : "관리자"}
+                   
+                        {userInfo.branchName || "지점명 없음"}
+                        
                 </div>
 
                 {/* Logout */}
